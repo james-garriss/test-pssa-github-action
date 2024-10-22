@@ -18,7 +18,7 @@ jobs:
         uses: james-garriss/github-action-psscriptanalyzer@master
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          settingsPath: powershell-psscriptanalyzer.psd1
+          settingsPath: PSScriptAnalyzerSettings.psd1
           sendComment: true
           failOnErrors: true
           failOnWarnings: true
