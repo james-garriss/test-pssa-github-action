@@ -14,22 +14,13 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      # - name: Setup PSScriptAnalyzer settings
-      #   run: cp Testing/Linting/MegaLinter/.powershell-psscriptanalyzer.psd1 ./powershell-psscriptanalyzer.psd1
-      # - name: Run PSScriptAnalyzer
-      #   uses: devblackops/github-action-psscriptanalyzer@master
-      #   with:
-      #     repoToken: ${{ secrets.GITHUB_TOKEN }}
-      #     settingsPath: ./powershell-psscriptanalyzer.psd1
-      #     sendComment: true
-      #     failOnErrors: true
-      #     failOnWarnings: true
-      #     failOnInfos: true
+      - name: Setup PSScriptAnalyzer settings
+        run: cp Testing/Linting/MegaLinter/.powershell-psscriptanalyzer.psd1 ./powershell-psscriptanalyzer.psd1
       - name: Run PSScriptAnalyzer
         uses: james-garriss/github-action-psscriptanalyzer@master
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
-          # settingsPath: ./powershell-psscriptanalyzer.psd1
+          settingsPath: ./powershell-psscriptanalyzer.psd1
           sendComment: true
           failOnErrors: true
           failOnWarnings: true
