@@ -5,6 +5,6 @@
         'PSUseSingularNouns',
         'PSUseShouldProcessForStateChangingFunctions',
         'PSUseOutputTypeCorrectly',
-        'AvoidUsingWriteHost'
+        'PSAvoidUsingWriteHost'
     )
 }
