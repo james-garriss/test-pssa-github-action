@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
-      - name: Copy Config
-        run: cp PSScriptAnalyzerSettings.psd1 ./PSScriptAnalyzerSettings.psd1
+      # - name: Copy Config
+      #   run: cp PSScriptAnalyzerSettings.psd1 ./PSScriptAnalyzerSettings.psd1
       - name: Run PSScriptAnalyzer
         uses: james-garriss/github-action-psscriptanalyzer@master
         with:
